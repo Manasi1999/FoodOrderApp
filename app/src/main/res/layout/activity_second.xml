@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    tools:context=".Second">
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view3"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu"/>
+
+
+        <RelativeLayout
+            android:background="@color/white_smoke"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/orange"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:navigationIcon="@drawable/ic_menu_black_24dp" />
+
+                <RelativeLayout
+                    android:background="@drawable/rounded_background"
+                    android:layout_margin="10dp"
+                    android:id="@+id/relativeLayout"
+                    android:layout_below="@+id/toolbar23"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_alignParentTop="true"
+                        android:id="@+id/image_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp">
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:id="@+id/image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:paddingTop="20dp"
+                        android:layout_below="@+id/image_view"
+                        android:gravity="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textStyle="bold"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TableLayout
+                        android:paddingTop="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:id="@id/table"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/des"
+                        android:layout_weight="1"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/description"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_column="1"/>
+
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_weight="2"
+                        android:ems="10"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp">
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:id="@+id/price"
+                        android:layout_weight="1"
+                        android:layout_column="1"
+                        android:text="@string/price"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+                    <TextView
+                        android:id="@+id/item_price"
+                        android:layout_weight="2"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="match_parent"
+                        android:ems="10"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"/>
+
+                    </TableRow>
+                    </TableLayout>
+
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:layout_below="@+id/table"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                     <RelativeLayout
+                         android:id="@+id/quantityLayout"
+                         android:gravity="center"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content">
+                     <TextView
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginBottom="10dp"
+                         android:id="@+id/quantity1"
+                         android:gravity="center"
+                         android:text="@string/quantity"
+                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                         android:layout_width="wrap_content"
+                         android:layout_height="48dp"/>
+
+                    <EditText
+                        android:gravity="center"
+                        android:layout_toRightOf="@+id/quantity1"
+                        android:id="@+id/quantity"
+                        android:layout_marginBottom="10dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/quantity1" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_below="@+id/quantityLayout"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:src="@drawable/ic_add_shopping_cart_black_24dp"
+                        android:background="@drawable/round_button"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/btn1"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="5dp"/>
+
+                    <ImageButton
+                        android:src="@drawable/cart"
+                        android:background="@drawable/round_button"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/btn1"
+                        android:id="@+id/btn2"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/btn1" />
+                    </RelativeLayout>
+
+                    </RelativeLayout>
+
+            </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
